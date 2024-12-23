@@ -3,6 +3,7 @@
 ## 目的
 
 利用規約など、一部を装飾する場合が多いテキストを都度 Spannable で装飾するのは面倒なので、テキストを [HTML](app/term.html) として保存し、それを [gradle のタスク](app/build.gradle.kts) で strings.xml として生成してアプリで利用できるようにしたもの。
+表示は Jetpack compose の [AnnotatedString.fromHtml()](https://developer.android.com/reference/kotlin/androidx/compose/ui/text/AnnotatedString.Companion#(androidx.compose.ui.text.AnnotatedString.Companion).fromHtml(kotlin.String,androidx.compose.ui.text.SpanStyle,androidx.compose.ui.text.SpanStyle,androidx.compose.ui.text.SpanStyle,androidx.compose.ui.text.SpanStyle,androidx.compose.ui.text.LinkInteractionListener)) を使用。
 
 > [!TIP]
 > - WebView ではなくネイティブで表示しているので、簡単にライト/ダークが正しく反映される。
