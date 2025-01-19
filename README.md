@@ -17,7 +17,7 @@
 ```kts
 // app/build.gradle.kts
 // term.html を strings.xml に変換するタスクを追加
-tasks.register("generateTermTaskName") {
+tasks.register("generateTermTask") {
     val stringId = "term_content"   // R.string.term_content
     val termFile = File(project.projectDir, "term.html")
     val outputDir = File(layout.buildDirectory.get().asFile, "generated/custom/res/values") // build/generated/custom/res/values/ 配下に生成
