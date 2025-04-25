@@ -72,6 +72,8 @@ tasks.register("generateTermTask") {
             .replace("""<!--.+?-->""".toRegex(), "")
             // <body> タグ内のみ抽出
             .replace(""".*<body>(.+?)</body>.*""".toRegex(), "$1")
+            // タグ間の空白を削除
+            .replace(""">\s+?<""".toRegex(), "><")
 
         val resourcesElement = Element("resources")
         val termContentElement = Element("string").setAttribute("name", stringId).setText(term)
